@@ -7,6 +7,11 @@
 particlesJS.load('particles-js', 'particles.json', function() {
   console.log('particles.js loaded - callback');
 });
+//  Assignment 1 
+// Name:Vivek Kundaliya
+// Id:301311622
+// Date:03/10/2023
+// 
 */
 
 /* Otherwise just put the config content (json): */

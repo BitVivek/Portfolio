@@ -1,3 +1,9 @@
+<!-- Assignment 1 
+Name:Vivek Kundaliya
+Id:301311622
+Date:03/10/2023
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +34,7 @@
 
 <body oncontextmenu="return false">
     <!-- Cursor Code -->
-    <div class="cursor"></div>
+    <!-- <div class="cursor"></div> -->
     <!-- Navbar -->
     <%-include('../partials/header.ejs')%>
     <%- body %>
@@ -62,23 +68,24 @@
     <script src="/js/script.js"></script>
     <script>
         {
+            document.documentElement.style.cursor = 'none';
             /* Cursor Code */
-            const cursor = document.querySelector(".cursor");
+            // const cursor = document.querySelector(".cursor");
             // Adding style to the cursor location everytime it moves (faking cursor)
-            document.addEventListener("mousemove", (event) => {
-                cursor.setAttribute(
-                    "style",
-                    `top: ${event.pageY - scrollY - 10}px ; left: ${event.pageX - 10}px`
-                );
-            });
+            // document.addEventListener("mousemove", (event) => {
+            //     cursor.setAttribute(
+            //         "style",
+            //         `top: ${event.pageY - scrollY - 10}px ; left: ${event.pageX - 10}px`
+            //     );
+            // });
 
-            document.addEventListener("click", () => {
-                cursor.classList.add("expand");
+        //     document.addEventListener("click", () => {
+        //         cursor.classList.add("expand");
 
-                setTimeout(() => {
-                    cursor.classList.remove("expand");
-                }, 500);
-            });
+        //         setTimeout(() => {
+        //             cursor.classList.remove("expand");
+        //         }, 500);
+        //     });
         }
     </script>
 </body>

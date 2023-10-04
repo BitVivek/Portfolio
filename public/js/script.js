@@ -1,4 +1,9 @@
 // Scroll Animation AOS init
+//  Assignment 1 
+// Name:Vivek Kundaliya
+// Id:301311622
+// Date:03/10/2023
+// 
 AOS.init();
 
 // Using Jquery to define Scroll spy and set active class
@@ -80,14 +85,21 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // <!-- tilt js effect ends -->
 
 // pre loader start
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
-function fadeOut() {
-  setInterval(loader, 500);
-}
-window.onload = fadeOut;
+// function loader() {
+//   let loaderElement = document.querySelector(".loader-container");
+  
+//   if (loaderElement) {
+//     loaderElement.classList.add("fade-out");
+//   }
+// }
+
+// function fadeOut() {
+//   setTimeout(loader, 500);
+// }
+
+// window.onload = fadeOut;
 // pre loader end
+
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({

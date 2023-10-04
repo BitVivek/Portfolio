@@ -1,3 +1,9 @@
+//  Assignment 1 
+// Name:Vivek Kundaliya
+// Id:301311622
+// Date:03/10/2023
+// 
+
 //Importing express and all other modules on top
 const express = require("express");
 const app = express();
@@ -18,8 +24,9 @@ app.use(express.urlencoded({ extended: true })); //req.body is parsed as a form
 app.use(methodOverride("_method")); //Setting the query for method-override
 app.use(express.static(path.join(__dirname, "public"))); //It will serve our static files
 
-//Default Index/Home Route
-//We don't need to add backslash when rendering view pages
+
+// Default Index/Home Route
+// We don't need to add backslash when rendering view pages
 app.get("/", async (req, res) => {
   try {
     //Fetch the incoming JSON data
@@ -38,18 +45,67 @@ app.get("/experience", (req, res) => {
 });
 
 // Experience Route
-app.get("/project", async (req, res) => {
+app.get("/projects", async (req, res) => {
   try {
     //Fetch the incoming JSON data
     const data = await JSON.stringify(userProjects);
     //Parse it into JavaScript Object
     const projects = await JSON.parse(data);
-    res.render("project", { projects });
+    res.render("projects", { projects });
+  } catch (e) {
+    console.log(e);
+  }
+});
+// // Routes
+// app.get('/', (req, res) => {
+//   res.render('About_Me');
+// });
+
+app.get("/about", async (req, res) => {
+  try {
+    //Fetch the incoming JSON data
+    const data = await JSON.stringify(userProjects);
+    //Parse it into JavaScript Object
+    const projects = await JSON.parse(data);
+    res.render("about", { projects });
+  } catch (e) {
+    console.log(e);
+  }
+});
+app.get("/skills", async (req, res) => {
+  try {
+    //Fetch the incoming JSON data
+    const data = await JSON.stringify(userProjects);
+    //Parse it into JavaScript Object
+    const projects = await JSON.parse(data);
+    res.render("skills", { projects });
   } catch (e) {
     console.log(e);
   }
 });
 
+app.get("/contact", async (req, res) => {
+  try {
+    //Fetch the incoming JSON data
+    const data = await JSON.stringify(userProjects);
+    //Parse it into JavaScript Object
+    const projects = await JSON.parse(data);
+    res.render("contact", { projects });
+  } catch (e) {
+    console.log(e);
+  }
+});
+// app.get('/experience', (req, res) => {
+//   res.render('Experience');
+// });
+
+// app.get('/footer', (req, res) => {
+//   res.render('Footer');
+// });
+
+// app.get('/header', (req, res) => {
+//   res.render('Header');
+// });
 //Starting up server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
